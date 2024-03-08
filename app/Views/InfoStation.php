@@ -47,7 +47,8 @@ $table->setHeading("Date","Quality", "Humidity", "Max Wind", "Air Pressure");
 
 //var_dump($bundesland);
 foreach($info as $row) {
-    $table-> addRow($row->date, $row->quality, $row->humidity, $row->max_wind, $row->mid_air_pressure);
+    $newDate = date("j.n.Y", strtotime($row->date));
+    $table-> addRow($newDate, $row->quality, $row->humidity, $row->max_wind, $row->mid_air_pressure);
 }
 
 
