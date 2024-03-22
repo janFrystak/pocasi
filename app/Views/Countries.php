@@ -48,7 +48,7 @@ $table->setHeading("Name", "Short Form");
 
 //var_dump($bundesland);
 foreach($bundesland as $row) {
-    $table-> addRow(anchor("StaniceCard/".$row->id, $row->name), $row->short_name);
+    $table-> addRow(anchor("StaniceCard/".$row->id, $row->name), anchor("CountryInfo/".$row->id, $row->short_name));
 }
 
 

@@ -40,6 +40,19 @@ class Main extends BaseController
     {
         
     }
+    public function getCountriesInfo($bundeslandId)
+
+    {
+        //$data["bundesland"] = $this->bundesland->find($bundeslandId)->findAll();
+        $data["bundesland"] = $this->bundesland->find($bundeslandId);
+        echo view("CountryInfo", $data);
+    }
+    public function getAllStaniceInfo()
+    {
+        $data["bundesland"] = $this-> bundesland ->join("station", "bundesland.id = station.bundesland", "inner")->findAll();
+        //$data["station"]  = $this->stanice->findAll();
+        echo view("StaniceInfo", $data);
+    }
     
    
 }

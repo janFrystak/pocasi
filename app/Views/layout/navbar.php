@@ -21,7 +21,7 @@
             <ul clas = "navbar-nav me-auto">
                 <li class = "nav-item">
                     <?php
-                     //echo anchor("polish", "Stranka", $pole);
+                     echo anchor("StaniceInfo", "Stanice", $pole);
                      ?>
                 </li>
             </ul>
